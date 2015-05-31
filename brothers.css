@@ -1,0 +1,24 @@
+
+body {font-family:verdana;font-size:80%;color:#000000;background-color:#D5E0DA}
+td {font-family:verdana;font-size:80%;color:#000000;vertical-align:top}
+td.lnk {font-family:verdana;font-size:100%;color:#000000;vertical-align:top}
+td.shdr {font-family:verdana;font-size:70%;color:#000000;vertical-align:top;font-weight:bold}
+td.nsrt {background-color:#B5C0BA;border-style:solid;border-width:1px;border-color:#95A09A}
+td.sect {background-color:#C5D0CA;border-style:solid;border-width:1px;border-color:#A5B0AA}
+td.shaded {background-color:#C5D0CA;border-style:solid;border-width:1px;border-color:#A5B0AA}
+font.hdr1 {font-family:georgia;font-size:300%;color:#000000;font-weight:bold}
+font.hdr2 {font-family:georgia;font-size:200%;color:#000000;font-weight:bold}
+font.hdr3 {font-family:georgia;font-size:150%;color:#000000;font-weight:bold}
+font.hdr4 {font-family:georgia;font-size:100%;color:#000000;font-weight:bold}
+font.lnk {font-family:verdana;font-size:100%;color:#000000;font-weight:bold}
+font.shdr {font-family:verdana;font-size:70%;color:#000000;font-weight:bold}
+font.img {font-family:verdana;font-size:90%;color:#000000;font-weight:bold}
+font.cap {font-family:verdana;font-size:66%;color:#000000;font-weight:bold}
+font.large {font-family:verdana;font-size:125%;color:#000000}
+img {border-color:#000000;border-width:1px;}
+hr {color:#002200;background-color:#000000}
+
+@media print {.screen_only {display:none;}}
+@media screen {.print_only {display:none;}}
+
+ul {list-style-type:none;}

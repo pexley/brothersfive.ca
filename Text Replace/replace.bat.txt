@@ -1,0 +1,2 @@
+FART -C -p "*.html" "<script type=\"text/javascript\" src=\"javascript/document_top.js\"></script>" "<script>WriteHeader();</script>"
+pause

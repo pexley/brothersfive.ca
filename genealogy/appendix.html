@@ -1,0 +1,583 @@
+<!-- The Next Generation of Genealogy Sitebuilding, v.4.1.0, Written by Darrin Lythgoe, 2001-2004 -->
+<html>
+<head>
+	<link href="genstyle.css" rel="stylesheet">
+	<title>Appendix</title>
+</head>
+
+<body>
+<h1>Appendix</h1>
+<br/>
+<h2>Description of Files</h2>
+<table cellspacing="0" cellpadding="4" class="normal" border="1">
+	<tr><td valign="top" colspan="2" bgcolor="#cccccc"><b>Configuration Pages</b></td></tr>
+	<tr><td valign="top">admin/adminmeta.php</td><td valign="top">For HTML or scripting language to be included in the HEAD section of each Admin page. Blank to start with, except for the style sheet declaration and a statement to keep search engines from indexing your Admin pages.
+		Customization is optional.</td></tr>
+	<tr><td valign="top">config.php</td><td valign="top">Database and other settings. You need to customize this before anything will work.</td></tr>
+	<tr><td valign="top">customconfig.php</td><td valign="top">Custom settings (starts empty).</td></tr>
+	<tr><td valign="top">footer.html (<em>deprecated</em>)</td><td valign="top">HTML to be included at the bottom of each page. Blank to start with except for some text crediting me as the author of TNG. You may use a different file, but you must specify the new file in the General Settings.</td></tr>
+	<tr><td valign="top">footer.html</td><td valign="top">Same as footer.html, but built as a PHP file so it can include dynamic content.</td></tr>
+	<tr><td valign="top">genlog.txt</td><td valign="top">Raw log data (starts empty). Must be made writeable (chmod 664).</td></tr>
+	<tr><td valign="top">admin/genlog.txt</td><td valign="top">Raw log data for admin area (starts empty). Must be made writeable (chmod 664).</td></tr>
+	<tr><td valign="top">genstyle.css</td><td valign="top">Presentational rules and guidelines.</td></tr>
+	<tr><td valign="top">genstyle2.css</td><td valign="top">An alternate style sheet. Rename to genstyle.css before using.</td></tr>
+	<tr><td valign="top">importconfig.php</td><td valign="top">Import-related settings.</td></tr>
+	<tr><td valign="top">logconfig.php</td><td valign="top">Log-related settings.</td></tr>
+	<tr><td valign="top">meta.html (<em>deprecated</em>)</td><td valign="top">For HTML or scripting language to be included in the HEAD section of each page. Blank to start with, except for the style sheet declaration. Customization is optional. You may use a different file, but you must specify the new file in the General Settings.</td></tr>
+	<tr><td valign="top">meta.php</td><td valign="top">Same as meta.html, but in PHP format.</td></tr>
+	<tr><td valign="top">mapconfig.php</td><td valign="top">Settings related to the Google Maps integration.</td></tr>
+	<tr><td valign="top">mytngstyle.css</td><td valign="top">If you know enough about style sheets and want to add your own style rules, add them here.</td></tr>
+	<tr><td valign="top">pedconfig.php</td><td valign="top">Settings for the pedigree charts. You will likely want to customize these in order to more closely integrate the charts with
+		the rest of your site..</td></tr>
+	<tr><td valign="top">tngtabs1.css</td><td valign="top">Style sheet used to display page tabs.</td></tr>
+	<tr><td valign="top">tngtabs2.css</td><td valign="top">Alternate style sheet for displaying page tabs (same colors as template #4).</td></tr>
+	<tr><td valign="top">templatestyle.css</td><td valign="top">Template-specific style rules (blank in the default version).</td></tr>
+	<tr><td valign="top">topmenu.html (<em>deprecated</em>)</td><td valign="top">HTML to be included at top of each page. Blank to start with except for the &lt;BODY&gt; tag. I recommend you put your site navigation here. You may use a different file, but you must specify the new file in the General Settings.</td></tr>
+	<tr><td valign="top">topmenu.php</td><td valign="top">Same as topmenu.html, but built as a PHP file so it can include dynamic content.</td></tr>
+	<tr><td valign="top">whatsnew.txt</td><td valign="top">Emtpy file for custom message on "What's New" page. Must be made writeable (chmod 664).</td></tr>
+	<tr>
+		<td valign="top" colspan="2">&nbsp;</td>
+	</tr>
+	<tr><td valign="top" colspan="2" bgcolor="#cccccc"><b>Public Pages</b></td></tr>
+	<tr><td valign="top">addbookmark.php</td><td valign="top">Adds a site bookmark for the selected page.</td></tr>
+	<tr><td valign="top">addnewacct.php</td><td valign="top">Puts information from potential user in users table, notifies administrator.</td></tr>
+	<tr><td valign="top">ahnentafel.php</td><td valign="top">Register ancestral report for an individual, where <em>personID=###</em>.</td></tr>
+	<tr><td valign="top">anniversaries.php</td><td valign="top">Report of ndividuals matching user-entered date and event criteria.</td></tr>
+	<tr><td valign="top">anniversaries2.php</td><td valign="top">Works in conjunction with anniversaries.php. Without this redirection, the original page will not properly refresh on submission.</td></tr>
+	<tr><td valign="top">begin.php</td><td valign="top">Wrapper for including config.php.</td></tr>
+	<tr><td valign="top">bookmarks.php</td><td valign="top">All site bookmarks for the computer you're at.</td></tr>
+	<tr><td valign="top">browsealbums.php</td><td valign="top">List of all albums.</td></tr>
+	<tr><td valign="top">browsedocs.php (<em>deprecated</em>)</td><td valign="top">List of all histories (deprecated: please use browsemedia.php?mediatypeID=histories)</td></tr>
+	<tr><td valign="top">browseheadstones.php (<em>deprecated</em>)</td><td valign="top">List of all headstones (deprecated: please use browsemedia.php?mediatypeID=headstones).</td></tr>
+	<tr><td valign="top">browserinfo.php</td><td valign="top">Determines the client's browser.</td></tr>
+	<tr><td valign="top">browsemedia.php</td><td valign="top">Displays a list of all media. Add "?mediatype=sometype" to limit to one media type (i.e., "photos").</td></tr>
+	<tr><td valign="top">browsenotes.php</td><td valign="top">Displays a list of all notes.</td></tr>
+	<tr><td valign="top">browsephotos.php (<em>deprecated</em>)</td><td valign="top">Displays a list of all photos (deprecated: please use browsemedia.php?mediatypeID=photos).</td></tr>
+	<tr><td valign="top">browserepos.php</td><td valign="top">Displays a list of all repositories.</td></tr>
+	<tr><td valign="top">browsesources.php</td><td valign="top">Displays a list of all sources.</td></tr>
+	<tr><td valign="top">browsetrees.php</td><td valign="top">Provides general database statistics.</td></tr>
+	<tr><td valign="top">browsetrees-old.php</td><td valign="top">Pre-v4 method of displaying list of all trees.</td></tr>
+	<tr><td valign="top">cemeteries.php</td><td valign="top">Displays list of all cemeteries (lets you drill down to find headstones).</td></tr>
+	<tr><td valign="top">changelanguage.php</td><td valign="top">Displays a list of all languages you've set up and allows visitors to select their preference.</td></tr>
+	<tr><td valign="top">checklogin.php</td><td valign="top">Behind-the-scenes check done on every page to see if user has logged in or not.</td></tr>
+	<tr><td valign="top">deletebookmark.php</td><td valign="top">Removes the selected site bookmark.</td></tr>
+	<tr><td valign="top">descend.php</td><td valign="top">Displays graphical descendancy chart for <em>personID=###</em>.</td></tr>
+	<tr><td valign="top">descendtext.php</td><td valign="top">Displays text-only descendancy chart for <em>personID=###</em>.</td></tr>
+	<tr><td valign="top">desctracker.php</td><td valign="top">Displays a graphical descendancy chart for a line of descent defined in descend.php.</td></tr>
+	<tr><td valign="top">dragdrop.js</td><td valign="top">Part of the Scriptaculous Javascript library.</td></tr>
+	<tr><td valign="top">effects.js</td><td valign="top">Part of the Scriptaculous Javascript library.</td></tr>
+	<tr><td valign="top">end.php</td><td valign="top">Includes code to end each page.</td></tr>
+	<tr><td valign="top">extrastree.php</td><td valign="top">Displays a list of all ancestors (where <i>person=###</i>) who have associated photos or histories.</td></tr>
+	<tr><td valign="top">familygroup.php</td><td valign="top">Displays a family group sheet, where <em>familyID=###</em>.</td></tr>
+	<tr><td valign="top">findperson.php</td><td valign="top">Displays a short summary of person records that match search criteria.</td></tr>
+	<tr><td valign="top">findpersonform.php</td><td valign="top">Accepts search criteria to locate matching persons.</td></tr>
+	<tr><td valign="top">fpdf.php</td><td valign="top">FPDF library (to generate PDFs), written by Oliver Plathey.</td></tr>
+	<tr><td valign="top">fpdf_cellfit.php</td><td valign="top">extension of FPDF library.</td></tr>
+	<tr><td valign="top">functions.php</td><td valign="top">Miscellaneous functions.</td></tr>
+	<tr><td valign="top">gedcom.php</td><td valign="top">Creates GEDCOM for download.</td></tr>
+	<tr><td valign="top">gedform.php</td><td valign="top">Form to request a GEDCOM file to download.</td></tr>
+	<tr><td valign="top">genlib.php</td><td valign="top">Contains database, header, footer and menu functions.</td></tr>
+	<tr><td valign="top">getlang.php</td><td valign="top">Contains language preference functions.</td></tr>
+	<tr><td valign="top">getperson.js</td><td valign="top">Javascript functions for the individual page.</td></tr>
+	<tr><td valign="top">getperson.php</td><td valign="top">Displays individual information, data first, where <em>personID=###</em>.</td></tr>
+	<tr><td valign="top">globallib.php</td><td valign="top">Contains functions common to both public and admin pages.</td></tr>
+	<tr><td valign="top">headstones.php</td><td valign="top">Displays list of all headstones for a given cemetery or locality.</td></tr>
+	<tr><td valign="top">historytemplate.php</td><td valign="top">A template file for creating histories (copies must go one folder below the genealogy area). This file can safely be removed from your site.</td></tr>
+	<tr><td valign="top">index.php</td><td valign="top">Your very basic home page (just in case you don't have one), with links to all the pages in this section. Please make it better!!</td></tr>
+	<tr><td valign="top">index_html.html</td><td valign="top">Your very basic home page (just in case you don't have one), with links to all the pages in this section, but this one is HTML. To use, rename to index.html and remove index.php. Please make it better!!</td></tr>
+	<tr><td valign="top">index_plus_header_footer.php</td><td valign="top">Your very basic home page (just in case you don't have one), with links to all the pages in this section. Please make it better!!</td></tr>
+	<tr><td valign="top">litbox.js</td><td valign="top">Javascript library used to create modal dialog windows.</td></tr>
+	<tr><td valign="top">log.php</td><td valign="top">Logs actions to the log file (<em>genlog.txt</em>).</td></tr>
+	<tr><td valign="top">login.php</td><td valign="top">Prompts user to log in.</td></tr>
+	<tr><td valign="top">logout.php</td><td valign="top">Logs a user out.</td></tr>
+	<tr><td valign="top">logxml.php</td><td valign="top">Fetches log data asynchonously.</td></tr>
+	<tr><td valign="top">maint.php</td><td valign="top">Stub to be displayed during maintenance mode.</td></tr>
+	<tr><td valign="top">mediatypes.php</td><td valign="top">A list of TNG mediatype definitions.</td></tr>
+	<tr><td valign="top">mostwanted.php</td><td valign="top">Most Wanted report.</td></tr>
+	<tr><td valign="top">net.js</td><td valign="top">AJAX library functions.</td></tr>
+	<tr><td valign="top">newacctform.php</td><td valign="top">Form users can fill out to request a username/password login.</td></tr>
+	<tr><td valign="top">pdfform.php</td><td valign="top">Collections options for PDF charts.</td></tr>
+	<tr><td valign="top">pedigree.php</td><td valign="top">Displays a graphical pedigree chart for an individual, where <em>personID=###</em>.</td></tr>
+	<tr><td valign="top">pedigreetext.php</td><td valign="top">Displays a text-only pedigree chart for an individual, where <em>personID=###</em>.</td></tr>
+	<tr><td valign="top">pedxml.php</td><td valign="top">Fetches pedigree data asynchonously in XML format.</td></tr>
+	<tr><td valign="top">personlib.php</td><td valign="top">Contains functions common to all public pages that show events (like for people, families, sources and photos).</td></tr>
+	<tr><td valign="top">photoblock.php</td><td valign="top">Contains code you can put on your home page to display a random photo.</td></tr>
+	<tr><td valign="top">places.php</td><td valign="top">Shows all place localities in the database (first letters only), plus some other interesting stats.</td></tr>
+	<tr><td valign="top">placesearch.php</td><td valign="top">Searches for and displays summaries for individuals who match place name criteria.</td></tr>
+	<tr><td valign="top">places100.php</td><td valign="top">Shows the top # places (ordered by number of localities), where <em>topnum=#</em>.</td></tr>
+	<tr><td valign="top">places-all.php</td><td valign="top">Shows all largest locality place names in the database.</td></tr>
+	<tr><td valign="top">places-oneletter.php</td><td valign="top">Shows all place name localities beginning with a given character (passed from places.php).</td></tr>
+	<tr><td valign="top">processlogin.php</td><td valign="top">Processes username and password entered by a user, performs login.</td></tr>
+	<tr><td valign="top">prototype.js</td><td valign="top">The Prototype ajax library.</td></tr>
+	<tr><td valign="top">readme.html</td><td valign="top">Installation guide and basic operating instructions. Can be removed after install is complete.</td></tr>
+	<tr><td valign="top">register.php</td><td valign="top">Displays a modified register descendancy report for an individual, where <em>personID=###</em>.</td></tr>
+	<tr><td valign="top">reglib.php</td><td valign="top">Contains functions common to both the Register and Ahnentafel reports.</td></tr>
+	<tr><td valign="top">relateform.php</td><td valign="top">Page where visitors select two candidates for relationship chart.</td></tr>
+	<tr><td valign="top">relationship.php</td><td valign="top">Charts relationship between two people (within a fixed number of generations).</td></tr>
+	<tr><td valign="top">relationship2.php</td><td valign="top">Works in conjunction with relationship.php. Without this redirection, the original page will not properly refresh on submission.</td></tr>
+	<tr><td valign="top">reports.php</td><td valign="top">Displays a list of all active reports.</td></tr>
+	<tr><td valign="top">rpt_descend.php</td><td valign="top">Generates a PDF descendancy report.</td></tr>
+	<tr><td valign="top">rpt_ind.php</td><td valign="top">Generates a PDF individual report.</td></tr>
+	<tr><td valign="top">rpt_pedigree.php</td><td valign="top">Generates a PDF pedigree chart.</td></tr>
+	<tr><td valign="top">rpt_utils.js</td><td valign="top">Javascript for PDF popup form.</td></tr>
+	<tr><td valign="top">savelanguage.php</td><td valign="top">Saves the visitor's language preference.</td></tr>
+	<tr><td valign="top">savelanguage2.php</td><td valign="top">Saves the visitor's language preference and returns them to the previous page.</td></tr>
+	<tr><td valign="top">savetentedit.php</td><td valign="top">Saves tentative edits for later review.</td></tr>
+	<tr><td valign="top">scriptaculous.js</td><td valign="top">The Scriptaculous Javascript library.</td></tr>
+	<tr><td valign="top">search.php</td><td valign="top">Searches for and displays summaries for individuals who match the criteria entered in <em>searchform.php</em>.</td></tr>
+	<tr><td valign="top">searchform.php</td><td valign="top">Search page to locate individuals.</td></tr>
+	<tr><td valign="top">sendlogin.php</td><td valign="top">Sends login information to e-mail address entered if a match is found.</td></tr>
+	<tr><td valign="top">showalbum.php</td><td valign="top">Shows contents of an album, where <em>albumID=###</em>.</td></tr>
+	<tr><td valign="top">showhistory.php</td><td valign="top">Shows a history record, where <em>docID=###</em>, if the history is stored in the database.</td></tr>
+	<tr><td valign="top">showlog.php</td><td valign="top">Shows most recently logged actions.</td></tr>
+	<tr><td valign="top">showmap.php</td><td valign="top">Shows map of a cemetery, where <em>cemeteryID=###</em>.</td></tr>
+	<tr><td valign="top">showmedia.php</td><td valign="top">Shows a media item, where <em>mediaID=###</em>.</td></tr>
+	<tr><td valign="top">showmedialib.php</td><td valign="top">A library of functions used by showmedia.php and showmediaxml.php.</td></tr>
+	<tr><td valign="top">showmediaxml.php</td><td valign="top">Fetches media asynchronously (for slideshow).</td></tr>
+	<tr><td valign="top">showrepo.php</td><td valign="top">Shows a repository record, where <em>repoID=###</em>.</td></tr>
+	<tr><td valign="top">showreport.php</td><td valign="top">Shows a report, where <em>reportID=###</em>.</td></tr>
+	<tr><td valign="top">showsource.php</td><td valign="top">Shows a source record, where <em>sourceID=###</em>.</td></tr>
+	<tr><td valign="top">showtree.php</td><td valign="top">Shows detail for a tree, where <em>treeID=###</em>.</td></tr>
+	<tr><td valign="top">smallimage.php</td><td valign="top">Generates image previews.</td></tr>
+	<tr><td valign="top">slideshow.js</td><td valign="top">The Javascript functions that run the media slideshow.</td></tr>
+	<tr><td valign="top">subroot.php</td><td valign="top">Stores sub-root location of config files (optional).</td></tr>
+	<tr><td valign="top">suggest.php</td><td valign="top">Prompts user for suggested changes to viewed record.</td></tr>
+	<tr><td valign="top">surnames.php</td><td valign="top">Shows all surnames in the database (first letters only), plus some other interesting stats.</td></tr>
+	<tr><td valign="top">surnames100.php</td><td valign="top">Shows the top # surnames (ordered by occurence), where <em>topnum=#</em>.</td></tr>
+	<tr><td valign="top">surnames-all.php</td><td valign="top">Shows all surnames in the database.</td></tr>
+	<tr><td valign="top">surnames-oneletter.php</td><td valign="top">Shows all surnames beginning with a given character (passed from surnames.php).</td></tr>
+	<tr><td valign="top">tentedit.js</td><td valign="top">Javascript functions used with tentative editing.</td></tr>
+	<tr><td valign="top">tentedit.php</td><td valign="top">Prompts user for tentative edits to displayed record.</td></tr>
+	<tr><td valign="top">timeline.php</td><td valign="top">Does 'behind-the-scenes' work for timeline chart.</td></tr>
+	<tr><td valign="top">timeline2.php</td><td valign="top">Displays timeline chart.</td></tr>
+	<tr><td valign="top">tngfiletypes.php</td><td valign="top">Definitions of some TNG file types.</td></tr>
+	<tr><td valign="top">tngmenuhover.js</td><td valign="top">Javascript library for TNG menus.</td></tr>
+	<tr><td valign="top">tngpedigree.js</td><td valign="top">Javascript library for AJAX pedigree chart.</td></tr>
+	<tr><td valign="top">tngprint.css</td><td valign="top">Printer-friendly style sheet.</td></tr>
+	<tr><td valign="top">tngrss.php</td><td valign="top">Outputs contents of "What's New" page in RSS newsreader format. When subscribing, you can get the feed to appear
+	in alternate languages if you append "&amp;lang=yourlanguage" (where "yourlanguage" is the name of the language as you have set it up in TNG) to the URL.</td></tr>
+	<tr><td valign="top">tngsendmail.php</td><td valign="top">Sends suggested edit from users to site owner.</td></tr>
+	<tr><td valign="top">tngrobots.php</td><td valign="top">Tells crawlers which files to index and which to ignore.</td></tr>
+	<tr><td valign="top">version.php</td><td valign="top">Contains current version information.</td></tr>
+	<tr><td valign="top">whatsnew.php</td><td valign="top">Report of new individuals, families, photos, histories and headstones.</td></tr>
+	<tr>
+		<td valign="top" colspan="2">&nbsp;</td>
+	</tr>
+	<tr><td valign="top" colspan="2" bgcolor="#cccccc"><b>Administration Pages<br/>(must go in the 'admin' folder)</b></td></tr>
+	<tr><td valign="top">add2albumxml.php</td><td valign="top">Fetches media asynchonously for possible inclusion in an album.</td></tr>
+	<tr><td valign="top">addalbum.php</td><td valign="top">Adds new album record to the database.</td></tr>
+	<tr><td valign="top">addassoc.php</td><td valign="top">Adds new association record to the database.</td></tr>
+	<tr><td valign="top">addbranch.php</td><td valign="top">Adds new branch record to the database.</td></tr>
+	<tr><td valign="top">addcemetery.php</td><td valign="top">Adds new cemetery record to the database.</td></tr>
+	<tr><td valign="top">addcitation.php</td><td valign="top">Adds new citation record to the database.</td></tr>
+	<tr><td valign="top">addcollection.php</td><td valign="top">Adds new media collection record to the database.</td></tr>
+	<tr><td valign="top">addentity.php</td><td valign="top">Adds new state or country (for cemetery locations) to the database.</td></tr>
+	<tr><td valign="top">addevent.php</td><td valign="top">Adds new event record to the database.</td></tr>
+	<tr><td valign="top">addeventtype.php</td><td valign="top">Adds new event type record to the database.</td></tr>
+	<tr><td valign="top">addfamily.php</td><td valign="top">Adds new family record to the database.</td></tr>
+	<tr><td valign="top">addlanguage.php</td><td valign="top">Adds new language record to the database.</td></tr>
+	<tr><td valign="top">addmedia.php</td><td valign="top">Adds new media record to the database.</td></tr>
+	<tr><td valign="top">addnote.php</td><td valign="top">Adds new note record to the database.</td></tr>
+	<tr><td valign="top">addperson.php</td><td valign="top">Adds new individual record to the database.</td></tr>
+	<tr><td valign="top">addperson2.php</td><td valign="top">Adds new individual record to the database (short form).</td></tr>
+	<tr><td valign="top">addplace.php</td><td valign="top">Adds new place record to the database.</td></tr>
+	<tr><td valign="top">addrepo.php</td><td valign="top">Adds new repository record to the database.</td></tr>
+	<tr><td valign="top">addreport.php</td><td valign="top">Adds new report record to the database.</td></tr>
+	<tr><td valign="top">addsource.php</td><td valign="top">Adds new source record to the database.</td></tr>
+	<tr><td valign="top">addtlevent.php</td><td valign="top">Adds new timeline event record to the database.</td></tr>
+	<tr><td valign="top">addtree.php</td><td valign="top">Adds new tree record to the database.</td></tr>
+	<tr><td valign="top">adduser.php</td><td valign="top">Adds new user record to the database.</td></tr>
+	<tr><td valign="top">adminlib.php</td><td valign="top">Contains database, header functions.</td></tr>
+	<tr><td valign="top">adminlog.php</td><td valign="top">Contains functions that perform logging in admin area.</td></tr>
+	<tr><td valign="top">adminshowlog.php</td><td valign="top">Shows administrative log.</td></tr>
+	<tr><td valign="top">albums.js</td><td valign="top">Javascript functions used with albums.</td></tr>
+	<tr><td valign="top">albums.php</td><td valign="top">Albums administration page.</td></tr>
+	<tr><td valign="top">AnchorPosition.js</td><td valign="top">Javascript required for color picker.</td></tr>
+	<tr><td valign="top">associations.php</td><td valign="top">Displays associations for an individual.</td></tr>
+	<tr><td valign="top">backup.php</td><td valign="top">Creates a backup file of a database table.</td></tr>
+	<tr><td valign="top">backuprestore.php</td><td valign="top">Select a table to back up or restore.</td></tr>
+	<tr><td valign="top">branches.php</td><td valign="top">Branch administration page.</td></tr>
+	<tr><td valign="top">branchlabels.php</td><td valign="top">Labels branches within a tree.</td></tr>
+	<tr><td valign="top">branchlib.php</td><td valign="top">Queries used with branches.</td></tr>
+	<tr><td valign="top">branchlibjs.php</td><td valign="top">Library of Javascript code and functions used with branches.</td></tr>
+	<tr><td valign="top">branchmenu.php</td><td valign="top">Accepts user parameters for labeling branches.</td></tr>
+	<tr><td valign="top">branchoptions.php</td><td valign="top">Displays dropdown of available branches.</td></tr>
+	<tr><td valign="top">cemeteries.php</td><td valign="top">Cemetery administration page.</td></tr>
+	<tr><td valign="top">checkID.php</td><td valign="top">Utility that checks to see if an ID is unique.</td></tr>
+	<tr><td valign="top">checklogin.php</td><td valign="top">Behind-the-scenes check done on every page to see if user has logged in or not.</td></tr>
+	<tr><td valign="top">citations.php</td><td valign="top">Displays citations for a selected event.</td></tr>
+	<tr><td valign="top">ColorPicker2.js</td><td valign="top">More Javascript required for color picker.</td></tr>
+	<tr><td valign="top">corner.php</td><td valign="top">Corner frame for TNG logo.</td></tr>
+	<tr><td valign="top">dataimport.php</td><td valign="top">Begins a GEDCOM import.</td></tr>
+	<tr><td valign="top">datevalidation.js</td><td valign="top">Makes sure entered dates are in a valid format.</td></tr>
+	<tr><td valign="top">datelib.php</td><td valign="top">Text date-to-true date conversion functions.</td></tr>
+	<tr><td valign="top">deepindex.php</td><td valign="top">Allows linking to individual admin pages within frames environment.</td></tr>
+	<tr><td valign="top">defphotos.php</td><td valign="top">Sets default photo for each person with photos.</td></tr>
+	<tr><td valign="top">deleteajax.php</td><td valign="top">Deletes various record times via ajax. Replaces deletealbum.php, deletelanguage.php, deletemedia.php,
+		deletetlevent.php, deleteperson.php, deletefamily.php, deletesource.php, deleterepo.php, deleteplace.php, deletecemetery.php, deleteuser.php,
+		deletebranch.php, deleteeventtype.php, deletereport.php, deletetree.php</td></tr>
+	<tr><td valign="top">deleteassoc.php</td><td valign="top">Deletes an association record.</td></tr>
+	<tr><td valign="top">deletecitation.php</td><td valign="top">Deletes a citation record.</td></tr>
+	<tr><td valign="top">deleteentity.php</td><td valign="top">Deletes a state or country (cemetery locations).</td></tr>
+	<tr><td valign="top">deleteevent.php</td><td valign="top">Deletes an event record.</td></tr>
+	<tr><td valign="top">deletelib.php</td><td valign="top">Library of functions used during deletions.</td></tr>
+	<tr><td valign="top">deletenote.php</td><td valign="top">Deletes a note record.</td></tr>
+	<tr><td valign="top">deletereview.php</td><td valign="top">Deletes a tentative edit record.</td></tr>
+	<tr><td valign="top">deleteselected.php</td><td valign="top">Deletes entities checked from a list (photos, histories, etc.).</td></tr>
+	<tr><td valign="top">diagnostics.php</td><td valign="top">Displays TNG and PHP diagnostics.</td></tr>
+	<tr><td valign="top">editalbum.php</td><td valign="top">Displays an album record for editing.</td></tr>
+	<tr><td valign="top">editassoc.php</td><td valign="top">Displays an association record for editing.</td></tr>
+	<tr><td valign="top">editbranch.php</td><td valign="top">Displays a branch record for editing.</td></tr>
+	<tr><td valign="top">editcemetery.php</td><td valign="top">Displays a cemetery record for editing.</td></tr>
+	<tr><td valign="top">editcollection.php</td><td valign="top">Displays a media collection record for editing.</td></tr>
+	<tr><td valign="top">editcitation.php</td><td valign="top">Displays a citation record for editing.</td></tr>
+	<tr><td valign="top">editconfig.php</td><td valign="top">Displays the values of your system variables for editing.</td></tr>
+	<tr><td valign="top">editevent.php</td><td valign="top">Displays an event record for editing.</td></tr>
+	<tr><td valign="top">editeventtype.php</td><td valign="top">Displays an event type record for editing.</td></tr>
+	<tr><td valign="top">editfamily.php</td><td valign="top">Displays a family record for editing.</td></tr>
+	<tr><td valign="top">editimportconfig.php</td><td valign="top">Displays the values of your import variables for editing.</td></tr>
+	<tr><td valign="top">editlanguage.php</td><td valign="top">Displays a language record for editing.</td></tr>
+	<tr><td valign="top">editlogconfig.php</td><td valign="top">Displays the values of your log variables for editing.</td></tr>
+	<tr><td valign="top">editmapconfig.php</td><td valign="top">Displays the values of your map-related variables for editing.</td></tr>
+	<tr><td valign="top">editmedia.php</td><td valign="top">Displays a media record for editing.</td></tr>
+	<tr><td valign="top">editmedialink.php</td><td valign="top">Displays a media link record for editing.</td></tr>
+	<tr><td valign="top">editmore.php</td><td valign="top">Displays additional event information for editing.</td></tr>
+	<tr><td valign="top">editmostwanted.php</td><td valign="top">Displays Most Wanted records for editing and sorting.</td></tr>
+	<tr><td valign="top">editnote.php</td><td valign="top">Displays a note record for editing.</td></tr>
+	<tr><td valign="top">editpedconfig.php</td><td valign="top">Displays the values of your pedigree variables for editing.</td></tr>
+	<tr><td valign="top">editperson.php</td><td valign="top">Displays a person record for editing.</td></tr>
+	<tr><td valign="top">editplace.php</td><td valign="top">Displays a place record for editing.</td></tr>
+	<tr><td valign="top">editrepo.php</td><td valign="top">Displays a repository record for editing.</td></tr>
+	<tr><td valign="top">editreport.php</td><td valign="top">Displays a report record for editing.</td></tr>
+	<tr><td valign="top">editsource.php</td><td valign="top">Displays a source record for editing.</td></tr>
+	<tr><td valign="top">edittlevent.php</td><td valign="top">Displays a timeline record for editing.</td></tr>
+	<tr><td valign="top">edittree.php</td><td valign="top">Displays a tree record for editing.</td></tr>
+	<tr><td valign="top">edituser.php</td><td valign="top">Displays a user record for editing.</td></tr>
+	<tr><td valign="top">eventtypes.js</td><td valign="top">Javascript library for event types administration.</td></tr>
+	<tr><td valign="top">eventtypes.php</td><td valign="top">Event types administration page.</td></tr>
+	<tr><td valign="top">export.php</td><td valign="top">Takes your export preferences prior to exporting a GEDCOM.</td></tr>
+	<tr><td valign="top">families.php</td><td valign="top">Family administration page.</td></tr>
+	<tr><td valign="top">filepicker.php</td><td valign="top">Displays contents of a TNG folder to allow easy picking of photos and other items.</td></tr>
+	<tr><td valign="top">findalbummedia.php</td><td valign="top">Displays summary of media records that match search criteria.</td></tr>
+	<tr><td valign="top">findform.php</td><td valign="top">Displays summary of media records that match search criteria.</td></tr>
+	<tr><td valign="top">findfamily2.php</td><td valign="top">Displays summary of family records that match search criteria.</td></tr>
+	<tr><td valign="top">findfamilyform.php</td><td valign="top">Accepts search criteria to locate matching families.</td></tr>
+	<tr><td valign="top">findperson.php</td><td valign="top">Displays longer summary of person records that match search criteria.</td></tr>
+	<tr><td valign="top">findpersonform.php</td><td valign="top">Accepts search criteria to locate matching persons.</td></tr>
+	<tr><td valign="top">findplaceform.php</td><td valign="top">Accepts search criteria to find matching places.</td></tr>
+	<tr><td valign="top">findplace.php</td><td valign="top">Displays longer summary of place records that match search criteria.</td></tr>
+	<tr><td valign="top">findrepo.php</td><td valign="top">Displays summary of repository records that match search criteria.</td></tr>
+	<tr><td valign="top">findrepoform.php</td><td valign="top">Accepts search criteria to find matching repositories.</td></tr>
+	<tr><td valign="top">findreview.php</td><td valign="top">Displays summary of tentative edit records ready for review that match search criteria.</td></tr>
+	<tr><td valign="top">findsource.php</td><td valign="top">Displays summary of source records that match search criteria.</td></tr>
+	<tr><td valign="top">findsourceform.php</td><td valign="top">Accepts search criteria for to find matching sources.</td></tr>
+	<tr><td valign="top">gedcom2.php</td><td valign="top">Exports a complete GEDCOM for a tree.</td></tr>
+	<tr><td valign="top">gedimport.php</td><td valign="top">Imports new genealogical data (individuals and marriages)</td></tr>
+	<tr><td valign="top">gedimport_eventtypes.php</td><td valign="top">Dependency of gedimport.php (used when importing custom event types only).</td></tr>
+	<tr><td valign="top">gedimport_families.php</td><td valign="top">Dependency of gedimport.php (handles family records).</td></tr>
+	<tr><td valign="top">gedimport_misc.php</td><td valign="top">Dependency of gedimport.php (miscellaneous functions).</td></tr>
+	<tr><td valign="top">gedimport_people.php</td><td valign="top">Dependency of gedimport.php (handles individual records).</td></tr>
+	<tr><td valign="top">gedimport_sources.php</td><td valign="top">Dependency of gedimport.php (handles source records).</td></tr>
+	<tr><td valign="top">gedimport_trees.php</td><td valign="top">Dependency of gedimport.php (handles tree-related functions).</td></tr>
+	<tr><td valign="top">generateID.php</td><td valign="top">Generates a unique person or family ID.</td></tr>
+	<tr><td valign="top">generatethumbs.php</td><td valign="top">Generate thumbnail images for existing photos.</td></tr>
+	<tr><td valign="top">getphotodetails.php</td><td valign="top">Retrieves information on a photo for Most Wanted editor.</td></tr>
+	<tr><td valign="top">imageutils.php</td><td valign="top">PHP functions common to several photo-manipulating scripts.</td></tr>
+	<tr><td valign="top">index.php</td><td valign="top">Main administration menu page (one of only two here you need to worry about).</td></tr>
+	<tr><td valign="top">languages.php</td><td valign="top">Language administration page.</td></tr>
+	<tr><td valign="top">leftbanner.php</td><td valign="top">Left navigational frame of admin set, displays menu items.</td></tr>
+	<tr><td valign="top">login.php</td><td valign="top">Prompts a user to log in.</td></tr>
+	<tr><td valign="top">logout.php</td><td valign="top">Logs a user out.</td></tr>
+	<tr><td valign="top">mailusers.php</td><td valign="top">Form to initiate e-mail to users.</td></tr>
+	<tr><td valign="top">main.php</td><td valign="top">Main admin menu, displays in central frame.</td></tr>
+	<tr><td valign="top">makefolder.php</td><td valign="top">Attempts to create TNG folders (used during installation). Success depends on server setup.</td></tr>
+	<tr><td valign="top">media.php</td><td valign="top">Media administration page.</td></tr>
+	<tr><td valign="top">mediaeventxml.php</td><td valign="top">Fetches event data asynchronously for use with media linking.</td></tr>
+	<tr><td valign="top">mediafind.js</td><td valign="top">Javascript library for media-related functions.</td></tr>
+	<tr><td valign="top">mediautils.js</td><td valign="top">Javascript library for media-related functions.</td></tr>
+	<tr><td valign="top">merge.php</td><td valign="top">Search for possible duplicate individuals and merge them on command.</td></tr>
+	<tr><td valign="top">mergeplaces.php</td><td valign="top">Merges place records.</td></tr>
+	<tr><td valign="top">mergeplacesajax.php</td><td valign="top">Performs place merge in background.</td></tr>
+	<tr><td valign="top">mergerepos.php</td><td valign="top">Search for possible duplicate repositories and merge them on command.</td></tr>
+	<tr><td valign="top">mergesources.php</td><td valign="top">Search for possible duplicate sources and merge them on command.</td></tr>
+	<tr><td valign="top">mostwanted.js</td><td valign="top">Javascript functions used while editing Most Wanted list.</td></tr>
+	<tr><td valign="top">mostwantedlist.php</td><td valign="top">Displays Most Wanted records for editing.</td></tr>
+	<tr><td valign="top">newalbum.php</td><td valign="top">Accepts information for new album record.</td></tr>
+	<tr><td valign="top">newbranch.php</td><td valign="top">Accepts information for new branch record.</td></tr>
+	<tr><td valign="top">newcemetery.php</td><td valign="top">Accepts information for new cemetery record.</td></tr>
+	<tr><td valign="top">newcollection.php</td><td valign="top">Accepts information for new media collection record.</td></tr>
+	<tr><td valign="top">newentity.php</td><td valign="top">Accepts information for new state or country record (cemetery locations).</td></tr>
+	<tr><td valign="top">newevent.php</td><td valign="top">Accepts information for new event record.</td></tr>
+	<tr><td valign="top">neweventtype.php</td><td valign="top">Accepts information for new event type record.</td></tr>
+	<tr><td valign="top">newfamily.php</td><td valign="top">Accepts information for new family record.</td></tr>
+	<tr><td valign="top">newlanguage.php</td><td valign="top">Accepts information for new language record.</td></tr>
+	<tr><td valign="top">newmedia.php</td><td valign="top">Accepts information for new media record.</td></tr>
+	<tr><td valign="top">newperson.php</td><td valign="top">Accepts information for new person record.</td></tr>
+	<tr><td valign="top">newperson2.php</td><td valign="top">Accepts information for new person record (short form).</td></tr>
+	<tr><td valign="top">newplace.php</td><td valign="top">Accepts information for new place record.</td></tr>
+	<tr><td valign="top">newrepo.php</td><td valign="top">Accepts information for new repository record.</td></tr>
+	<tr><td valign="top">newreport.php</td><td valign="top">Accepts information for new report record.</td></tr>
+	<tr><td valign="top">newsource.php</td><td valign="top">Accepts information for new source record.</td></tr>
+	<tr><td valign="top">newtlevent.php</td><td valign="top">Accepts information for new timeline event record.</td></tr>
+	<tr><td valign="top">newtree.php</td><td valign="top">Accepts information for new tree record.</td></tr>
+	<tr><td valign="top">newuser.php</td><td valign="top">Accepts information for new user record.</td></tr>
+	<tr><td valign="top">notes.php</td><td valign="top">Displays notes for a selected event.</td></tr>
+	<tr><td valign="top">optimize.php</td><td valign="top">Optimizes a database table.</td></tr>
+	<tr><td valign="top">ordermedia.php</td><td valign="top">Sort media for a designated entity and media type.</td></tr>
+	<tr><td valign="top">ordermediaform.php</td><td valign="top">Accepts entity and media type to pass to sort utility.</td></tr>
+	<tr><td valign="top">orderphotos.js</td><td valign="top">Miscellaneous Javascript functions for orderphotos.php.</td></tr>
+	<tr><td valign="top">people.php</td><td valign="top">Person administration page.</td></tr>
+	<tr><td valign="top">photoimport.php</td><td valign="top">Options for importing photos.</td></tr>
+	<tr><td valign="top">photoimporter.php</td><td valign="top">Imports photos.</td></tr>
+	<tr><td valign="top">phpinfo.php</td><td valign="top">Displays "PHP Info" page for your PHP installation.</td></tr>
+	<tr><td valign="top">places.php</td><td valign="top">Places administration page.</td></tr>
+	<tr><td valign="top">PopupWindow.js</td><td valign="top">Javascript functions for color selection popup.</td></tr>
+	<tr><td valign="top">prefixes.php</td><td valign="top">Contains ID prefixes for individuals, families &amp; sources.</td></tr>
+	<tr><td valign="top">processlogin.php</td><td valign="top">Processes username and password entered by a user, performs login.</td></tr>
+	<tr><td valign="top">renumber.php</td><td valign="top">Resequences IDs.</td></tr>
+	<tr><td valign="top">renumbermenu.php</td><td valign="top">Option menu for resequencing.</td></tr>
+	<tr><td valign="top">reports.js</td><td valign="top">Javascript routines common to new/edit report screens.</td></tr>
+	<tr><td valign="top">reports.php</td><td valign="top">Reports administration page.</td></tr>
+	<tr><td valign="top">repositories.php</td><td valign="top">Repositories administration page.</td></tr>
+	<tr><td valign="top">restore.php</td><td valign="top">Restores a backed-up table.</td></tr>
+	<tr><td valign="top">review.php</td><td valign="top">Displays a tentative edit for administrative review.</td></tr>
+	<tr><td valign="top">reviewusers.php</td><td valign="top">Displays user records waiting for administrative review.</td></tr>
+	<tr><td valign="top">rightbanner.php</td><td valign="top">Top right frame of admin set, displays TNG version, language switcher and other menu items.</td></tr>
+	<tr><td valign="top">savelanguage_admin.php</td><td valign="top">Processes a language switch.</td></tr>
+	<tr><td valign="top">secondary.php</td><td valign="top">Indicates progress of secondary data maintenance processes (GENDEX creation, tracking lines of descent)</td></tr>
+	<tr><td valign="top">second_menu.php</td><td valign="top">Menu of secondary data processes.</td></tr>
+	<tr><td valign="top">selectutils.js</td><td valign="top">Javascript routines common to several admin screens.</td></tr>
+	<tr><td valign="top">sendmailusers</td><td valign="top">Sends e-mail to users.</td></tr>
+	<tr><td valign="top">setup.php</td><td valign="top">Configuration Setup page (the other one you need to worry about).</td></tr>
+	<tr><td valign="top">showbranch.php</td><td valign="top">Show individuals in a particular branch.</td></tr>
+	<tr><td valign="top">sources.php</td><td valign="top">Sources administration page.</td></tr>
+	<tr><td valign="top">tablecreate.php</td><td valign="top">Create all tables needed for application (WARNING: ALL PRE-EXISTING DATA WILL BE LOST!!)</td></tr>
+	<tr><td valign="top">thumbnails.php</td><td valign="top">Form to initiate thumbnail generation.</td></tr>
+	<tr><td valign="top">timelineevents.php</td><td valign="top">Timeline events administration page.</td></tr>
+	<tr><td valign="top">trees.php</td><td valign="top">Trees administration page.</td></tr>
+	<tr><td valign="top">updatealbum.php</td><td valign="top">Saves changes to an album record.</td></tr>
+	<tr><td valign="top">updateassoc.php</td><td valign="top">Saves changes to an association record.</td></tr>
+	<tr><td valign="top">updatebranch.php</td><td valign="top">Saves changes to a branch record.</td></tr>
+	<tr><td valign="top">updatecemetery.php</td><td valign="top">Saves changes to a cemetery record.</td></tr>
+	<tr><td valign="top">updatecitation.php</td><td valign="top">Saves changes to a citation record.</td></tr>
+	<tr><td valign="top">updatecollection.php</td><td valign="top">Saves changes to a media collection record.</td></tr>
+	<tr><td valign="top">updateconfig.php</td><td valign="top">Saves changes to system variables.</td></tr>
+	<tr><td valign="top">updateevent.php</td><td valign="top">Saves changes to an event record.</td></tr>
+	<tr><td valign="top">updateeventtype.php</td><td valign="top">Saves changes to an event type record.</td></tr>
+	<tr><td valign="top">updatefamily.php</td><td valign="top">Saves changes to a family record.</td></tr>
+	<tr><td valign="top">updateimportconfig.php</td><td valign="top">Saves changes to import variables.</td></tr>
+	<tr><td valign="top">updatelanguage.php</td><td valign="top">Saves changes to a language record.</td></tr>
+	<tr><td valign="top">updatelogconfig.php</td><td valign="top">Saves changes to log variables.</td></tr>
+	<tr><td valign="top">updatemapconfig.php</td><td valign="top">Saves changes to map-related variables.</td></tr>
+	<tr><td valign="top">updatemedia.php</td><td valign="top">Saves changes to a media record.</td></tr>
+	<tr><td valign="top">updatemore.php</td><td valign="top">Saves changes to an extended event record.</td></tr>
+	<tr><td valign="top">updatemostwanted.php</td><td valign="top">Saves changes to Most Wanted records.</td></tr>
+	<tr><td valign="top">updatenote.php</td><td valign="top">Saves changes to a note record.</td></tr>
+	<tr><td valign="top">updateorder.php</td><td valign="top">Saves changes to various records via ajax.</td></tr>
+	<tr><td valign="top">updatepedconfig.php</td><td valign="top">Saves changes to pedigree variables.</td></tr>
+	<tr><td valign="top">updateperson.php</td><td valign="top">Saves changes to a person record.</td></tr>
+	<tr><td valign="top">updateplace.php</td><td valign="top">Saves changes to a place record.</td></tr>
+	<tr><td valign="top">updaterepo.php</td><td valign="top">Saves changes to a repository record.</td></tr>
+	<tr><td valign="top">updatereport.php</td><td valign="top">Saves changes to a report record.</td></tr>
+	<tr><td valign="top">updateselectedeventtypes.php</td><td valign="top">Saves mass changes to event type records.</td></tr>
+	<tr><td valign="top">updateselectedmedia.php</td><td valign="top">Saves mass changes to media records.</td></tr>
+	<tr><td valign="top">updatesource.php</td><td valign="top">Saves changes to a source record.</td></tr>
+	<tr><td valign="top">updatetlevent.php</td><td valign="top">Saves changes to a timeline event record.</td></tr>
+	<tr><td valign="top">updatetree.php</td><td valign="top">Saves changes to a tree record.</td></tr>
+	<tr><td valign="top">updateuser.php</td><td valign="top">Saves changes to a user record.</td></tr>
+	<tr><td valign="top">users.php</td><td valign="top">Users administration page.</td></tr>
+	<tr><td valign="top">whatsnewmsg.php</td><td valign="top">Accepts text to be displayed on the "What's New" page.</td></tr>
+	<tr>
+		<td valign="top" colspan="2">&nbsp;</td>
+	</tr>
+	<tr><td valign="top" colspan="2" bgcolor="#cccccc"><b>Text Pages<br/>(must go in the 'English' folder)</b></td></tr>
+	<tr><td valign="top">admintext.php</td><td valign="top">Text messages for all administration pages.</td></tr>
+	<tr><td valign="top">albums_help.php</td><td valign="top">Help for all album administration pages.</td></tr>
+	<tr><td valign="top">alltext.php</td><td valign="top">Text messages common to both public and administration pages.</td></tr>
+	<tr><td valign="top">assoc_help.php</td><td valign="top">Help for all association pages.</td></tr>
+	<tr><td valign="top">backuprestore_help.php</td><td valign="top">Help for all backup/restore administration pages.</td></tr>
+	<tr><td valign="top">branches_help.php</td><td valign="top">Help for all branch administration pages.</td></tr>
+	<tr><td valign="top">cemeteries_help.php</td><td valign="top">Help for all cemetery administration pages.</td></tr>
+	<tr><td valign="top">citations_help.php</td><td valign="top">Help for all citation administration pages.</td></tr>
+	<tr><td valign="top">config_help.php</td><td valign="top">Help for general configuration settings.</td></tr>
+	<tr><td valign="top">cust_text.php</td><td valign="top">Reserved for custom text messages (starts empty).</td></tr>
+	<tr><td valign="top">data_help.php</td><td valign="top">Help for all data import administration pages.</td></tr>
+	<tr><td valign="top">events_help.php</td><td valign="top">Help for all events administration pages.</td></tr>
+	<tr><td valign="top">eventtypes_help.php</td><td valign="top">Help for all event types administration pages.</td></tr>
+	<tr><td valign="top">families_help.php</td><td valign="top">Help for all family administration pages.</td></tr>
+	<tr><td valign="top">index_help.php</td><td valign="top">Help for main administration menu page.</td></tr>
+	<tr><td valign="top">logconfig_help.php</td><td valign="top">Help for log configuration settings.</td></tr>
+	<tr><td valign="top">media_help.php</td><td valign="top">Help for all media administration pages.</td></tr>
+	<tr><td valign="top">more_help.php</td><td valign="top">Help for all "More" pages (additional information for events).</td></tr>
+	<tr><td valign="top">notes_help.php</td><td valign="top">Help for all notes administration pages.</td></tr>
+	<tr><td valign="top">pedconfig_help.php</td><td valign="top">Help for pedigree configuration settings.</td></tr>
+	<tr><td valign="top">people_help.php</td><td valign="top">Help for all person administration pages.</td></tr>
+	<tr><td valign="top">places_help.php</td><td valign="top">Help for all place administration pages.</td></tr>
+	<tr><td valign="top">reports_help.php</td><td valign="top">Help for all report administration pages.</td></tr>
+	<tr><td valign="top">repositories_help.php</td><td valign="top">Help for all repository administration pages.</td></tr>
+	<tr><td valign="top">second_help.php</td><td valign="top">Help for all secondary processes pages.</td></tr>
+	<tr><td valign="top">setup_help.php</td><td valign="top">Help for configuration setup menu page.</td></tr>
+	<tr><td valign="top">sources_help.php</td><td valign="top">Help for all sources administration pages.</td></tr>
+	<tr><td valign="top">text.php</td><td valign="top">Text messages for all public pages.</td></tr>
+	<tr><td valign="top">tlevents_help.php</td><td valign="top">Help for all timeline event administration pages.</td></tr>
+	<tr><td valign="top">trees_help.php</td><td valign="top">Help for all trees administration pages.</td></tr>
+	<tr><td valign="top">users_help.php</td><td valign="top">Help for all users administration pages.</td></tr>
+	<tr>
+		<td valign="top" colspan="2">&nbsp;</td>
+	</tr>
+	<tr><td valign="top" colspan="2" bgcolor="#cccccc"><b>Images</b></td></tr>
+	<tr><td valign="top">ArrowDown.gif</td><td valign="top">Downward pointing arrow for pedigree chart. Indicates more individual information is present. Also used on menus.</td></tr>
+	<tr><td valign="top">ArrowLeft.gif</td><td valign="top">Left-facing arrow for pedigree and descendancy charts. Indicates additional generations are present.</td></tr>
+	<tr><td valign="top">ArrowRight.gif</td><td valign="top">Right-facing arrow for pedigree chart. Indicates additional pedigree generations are present.</td></tr>
+	<tr><td valign="top">background.gif</td><td valign="top">Background pattern for admin pages.</td></tr>
+	<tr><td valign="top">black.gif</td><td valign="top">Black one-pixel image used to create pedigree lines with text-only option.</td></tr>
+	<tr><td valign="top">Chart.gif</td><td valign="top">Small pedigree image used to indicate a link to another pedigree chart.</td></tr>
+	<tr><td valign="top">dchart.gif</td><td valign="top">Small descendancy image used to indicate a link to a graphical representation of the descendancy report to that point.</td></tr>
+	<tr><td valign="top">doc.gif</td><td valign="top">Small document icon used to indicate that an individual has at least one history linked to their record.</td></tr>
+	<tr><td valign="top">media-prevbg.gif</td><td valign="top">Bubble behind image previews (IE only).</td></tr>
+	<tr><td valign="top">media-prevbg.png</td><td valign="top">Bubble behind image previews.</td></tr>
+	<tr><td valign="top">photo.gif</td><td valign="top">Small camera icon used to indicate that an individual has at least one photo linked to their record.</td></tr>
+	<tr><td valign="top">spacer.gif</td><td valign="top">Blank one-pixel image used as filler.</td></tr>
+	<tr><td valign="top">spinner.gif</td><td valign="top">Animated image to indicate that something is happening in the background.</td></tr>
+	<tr><td valign="top">tng_hist.gif</td><td valign="top">Small icon for histories.</td></tr>
+	<tr><td valign="top">tng_admin.gif</td><td valign="top">Small icon for administration.</td></tr>
+	<tr><td valign="top">tng_album.gif</td><td valign="top">Small icon for albums.</td></tr>
+	<tr><td valign="top">tng_bmk.gif</td><td valign="top">Small icon for bookmarks.</td></tr>
+	<tr><td valign="top">tng_bmk2.gif</td><td valign="top">A different small icon for bookmarks.</td></tr>
+	<tr><td valign="top">tng_close.gif</td><td valign="top">Small icon for "Close".</td></tr>
+	<tr><td valign="top">tng_collapse.gif</td><td valign="top">Small arrow icon for "Collapse".</td></tr>
+	<tr><td valign="top">tng_contact.gif</td><td valign="top">Small icon for "Contact Us".</td></tr>
+	<tr><td valign="top">tng_date.gif</td><td valign="top">Small icon for dates &amp; anniversaries.</td></tr>
+	<tr><td valign="top">tng_desc.gif</td><td valign="top">Small icon for descendancy.</td></tr>
+	<tr><td valign="top">tng_doc.gif</td><td valign="top">Small icon for documents.</td></tr>
+	<tr><td valign="top">tng_edit.gif</td><td valign="top">Small icon for editing.</td></tr>
+	<tr><td valign="top">tng_expand.gif</td><td valign="top">Small arrow icon for "Expand".</td></tr>
+	<tr><td valign="top">tng_female.gif</td><td valign="top">Small icon to indicate displayed individual is a female.</td></tr>
+	<tr><td valign="top">tng_ged.gif</td><td valign="top">Small icon for GEDCOM download.</td></tr>
+	<tr><td valign="top">tng_help.gif</td><td valign="top">Small icon for menu guide.</td></tr>
+	<tr><td valign="top">tng_hist.gif</td><td valign="top">Small icon for histories.</td></tr>
+	<tr><td valign="top">tng_home.gif</td><td valign="top">Small icon for home page.</td></tr>
+	<tr><td valign="top">tng_home2.gif</td><td valign="top">Slightly larger icon for home page.</td></tr>
+	<tr><td valign="top">tng_hs.gif</td><td valign="top">Small icon for headstones.</td></tr>
+	<tr><td valign="top">tng_ind.gif</td><td valign="top">Small icon for individual record page.</td></tr>
+	<tr><td valign="top">tng_log.gif</td><td valign="top">Small icon for login/logout.</td></tr>
+	<tr><td valign="top">tng_log2.gif</td><td valign="top">Slightly larger icon for login.</td></tr>
+	<tr><td valign="top">tng_logout.gif</td><td valign="top">Small icon for logout.</td></tr>
+	<tr><td valign="top">tng_male.gif</td><td valign="top">Small icon to indicate displayed individual is a male.</td></tr>
+	<tr><td valign="top">tng_media.gif</td><td valign="top">Small icon for media.</td></tr>
+	<tr><td valign="top">tng_minus.gif</td><td valign="top">Small icon for collapsing a hidden block.</td></tr>
+	<tr><td valign="top">tng_mw.gif</td><td valign="top">Small icon for "Most Wanted" page.</td></tr>
+	<tr><td valign="top">tng_new.gif</td><td valign="top">Small icon for "What's New" page.</td></tr>
+	<tr><td valign="top">tng_note.gif</td><td valign="top">Small icon for notes.</td></tr>
+	<tr><td valign="top">tng_ped.gif</td><td valign="top">Small icon for pedigree.</td></tr>
+	<tr><td valign="top">tng_photo.gif</td><td valign="top">Small icon for photos.</td></tr>
+	<tr><td valign="top">tng_place.gif</td><td valign="top">Small icon for places.</td></tr>
+	<tr><td valign="top">tng_plus.gif</td><td valign="top">Small icon for expanding a hidden block.</td></tr>
+	<tr><td valign="top">tng_rec.gif</td><td valign="top">Small icon for recordings.</td></tr>
+	<tr><td valign="top">tng_rel.gif</td><td valign="top">Small icon for relationship chart.</td></tr>
+	<tr><td valign="top">tng_rpt.gif</td><td valign="top">Small icon for reports.</td></tr>
+	<tr><td valign="top">tng_search.gif</td><td valign="top">Small icon for search action.</td></tr>
+	<tr><td valign="top">tng_search2.gif</td><td valign="top">Slightly larger icon for search action.</td></tr>
+	<tr><td valign="top">tng_search_small.gif</td><td valign="top">Very small icon for place searching.</td></tr>
+	<tr><td valign="top">tng_src.gif</td><td valign="top">Small icon for sources.</td></tr>
+	<tr><td valign="top">tng_sort_asc.gif</td><td valign="top">Small arrow icon indicating ascending sort.</td></tr>
+	<tr><td valign="top">tng_sort_desc.gif</td><td valign="top">Small arrow icon indicating descending sort.</td></tr>
+	<tr><td valign="top">tng_stats.gif</td><td valign="top">Small icon for statistics.</td></tr>
+	<tr><td valign="top">tng_time.gif</td><td valign="top">Small icon for timeline.</td></tr>
+	<tr><td valign="top">tng_video.gif</td><td valign="top">Small icon for videos.</td></tr>
+	<tr><td valign="top">tngtab.png</td><td valign="top">Image used with inactive tabs.</td></tr>
+	<tr><td valign="top">tngtabactive.png</td><td valign="top">Image used with active tabs.</td></tr>
+	<tr><td valign="top">admin/albums_icon.gif</td><td valign="top">Icon for Albums.</td></tr>
+	<tr><td valign="top">admin/ArrowUp.gif</td><td valign="top">Upward pointing arrow for sorting photos.</td></tr>
+	<tr><td valign="top">admin/ArrowDown.gif</td><td valign="top">Downward pointing arrow for sorting photos.</td></tr>
+	<tr><td valign="top">admin/backuprestore_icon.gif</td><td valign="top">Icon for Backup/Restore/Optimize Table Data.</td></tr>
+	<tr><td valign="top">admin/branches_icon.gif</td><td valign="top">Icon for Branches.</td></tr>
+	<tr><td valign="top">admin/cemeteries_icon.gif</td><td valign="top">Icon for Cemeteries.</td></tr>
+	<tr><td valign="top">admin/customeventtypes_icon.gif</td><td valign="top">Icon for Event Types.</td></tr>
+	<tr><td valign="top">admin/data_icon.gif</td><td valign="top">Icon for Data Import.</td></tr>
+	<tr><td valign="top">admin/families_icon.gif</td><td valign="top">Icon for Families.</td></tr>
+	<tr><td valign="top">admin/first_button.gif</td><td valign="top">Button indicating first in a series.</td></tr>
+	<tr><td valign="top">admin/green.gif</td><td valign="top">Icon indicating a green light.</td></tr>
+	<tr><td valign="top">admin/headstones_icon.gif</td><td valign="top">Icon for Headstones.</td></tr>
+	<tr><td valign="top">admin/histories_icon.gif</td><td valign="top">Icon for Histories.</td></tr>
+	<tr><td valign="top">admin/languages_icon.gif</td><td valign="top">Icon for Languages.</td></tr>
+	<tr><td valign="top">admin/last_button.gif</td><td valign="top">Button indicating last in a series.</td></tr>
+	<tr><td valign="top">admin/next_button.gif</td><td valign="top">Button indicating next in a series.</td></tr>
+	<tr><td valign="top">admin/orange.gif</td><td valign="top">Icon indicating an orange light.</td></tr>
+	<tr><td valign="top">admin/people_icon.gif</td><td valign="top">Icon for People.</td></tr>
+	<tr><td valign="top">admin/photos_icon.gif</td><td valign="top">Icon for Photos.</td></tr>
+	<tr><td valign="top">admin/places_icon.gif</td><td valign="top">Icon for Places.</td></tr>
+	<tr><td valign="top">admin/prev_button.gif</td><td valign="top">Button indicating previous in a series.</td></tr>
+	<tr><td valign="top">admin/red.gif</td><td valign="top">Icon indicating a red light.</td></tr>
+	<tr><td valign="top">admin/reports_icon.gif</td><td valign="top">Icon for Reports.</td></tr>
+	<tr><td valign="top">admin/repos_icon.gif</td><td valign="top">Icon for Repositories.</td></tr>
+	<tr><td valign="top">admin/second_icon.gif</td><td valign="top">Icon for Secondary Processes.</td></tr>
+	<tr><td valign="top">admin/setup_icon.gif</td><td valign="top">Icon for Setup &amp; Configuration.</td></tr>
+	<tr><td valign="top">admin/sources_icon.gif</td><td valign="top">Icon for Sources.</td></tr>
+	<tr><td valign="top">admin/tlevents_icon.gif</td><td valign="top">Icon for Timeline Events.</td></tr>
+	<tr><td valign="top">admin/tng_assoc.gif</td><td valign="top">Small icon for associations (none present).</td></tr>
+	<tr><td valign="top">admin/tng_assoc_on.gif</td><td valign="top">Small icon for associations (at least one exists).</td></tr>
+	<tr><td valign="top">admin/tng_branch.gif</td><td valign="top">Small icon for labeling branches.</td></tr>
+	<tr><td valign="top">admin/tng_cite.gif</td><td valign="top">Small icon for citations (none present).</td></tr>
+	<tr><td valign="top">admin/tng_cite_on.gif</td><td valign="top">Small icon for citations (at least one exists).</td></tr>
+	<tr><td valign="top">admin/tng_clear.gif</td><td valign="top">Small icon for clearing trees.</td></tr>
+	<tr><td valign="top">admin/tng_colorpicker.gif</td><td valign="top">Small icon for color selection.</td></tr>
+	<tr><td valign="top">admin/tng_delete.gif</td><td valign="top">Small icon for delete action.</td></tr>
+	<tr><td valign="top">admin/tng_down.gif</td><td valign="top">Small icon for moving items down in a list.</td></tr>
+	<tr><td valign="top">admin/tng_edit.gif</td><td valign="top">Small icon for edit action.</td></tr>
+	<tr><td valign="top">admin/tng_left.gif</td><td valign="top">Small icon for moving items left from one list to another.</td></tr>
+	<tr><td valign="top">admin/tng_more.gif</td><td valign="top">Small icon for more info on an event (none present).</td></tr>
+	<tr><td valign="top">admin/tng_more_on.gif</td><td valign="top">Small icon for more info on an event (at least one exists).</td></tr>
+	<tr><td valign="top">admin/tng_note.gif</td><td valign="top">Small icon for notes (none present).</td></tr>
+	<tr><td valign="top">admin/tng_note_on.gif</td><td valign="top">Small icon for notes (at least one exists).</td></tr>
+	<tr><td valign="top">admin/tng_optimize.gif</td><td valign="top">Small icon for optimizing tables.</td></tr>
+	<tr><td valign="top">admin/tng_restore.gif</td><td valign="top">Small icon for restoring tables.</td></tr>
+	<tr><td valign="top">admin/tng_right.gif</td><td valign="top">Small icon for moving items right from one list to another.</td></tr>
+	<tr><td valign="top">admin/tng_save.gif</td><td valign="top">Small icon for exporting a GEDCOM.</td></tr>
+	<tr><td valign="top">admin/tng_test.gif</td><td valign="top">Small icon for testing a page.</td></tr>
+	<tr><td valign="top">admin/tng_up.gif</td><td valign="top">Small icon for moving items up in a list.</td></tr>
+	<tr><td valign="top">admin/tnglogo.gif</td><td valign="top">TNG logo.</td></tr>
+	<tr><td valign="top">admin/trees_icon.gif</td><td valign="top">Icon for Trees.</td></tr>
+	<tr><td valign="top">admin/users_icon.gif</td><td valign="top">Icon for Users.</td></tr>
+	<tr>
+		<td valign="top" colspan="2">&nbsp;</td>
+	</tr>
+	<tr><td valign="top" colspan="2" bgcolor="#cccccc"><b>Google Maps Integration files</b></td></tr>
+	<tr><td valign="top">###.png</td><td valign="top">"Pin" images to indicate map locations (various "place levels").</td></tr>
+	<tr><td valign="top">blank.gif</td><td valign="top">Blank image to correct transparency problem with PNG images.</td></tr>
+	<tr><td valign="top">earth.gif</td><td valign="top">Icon to indicate a link to Google Earth.</td></tr>
+	<tr><td valign="top">googleearthbylatlong.php</td><td valign="top">Creates an XML file for entry into Google Earth on a set of coordinates.</td></tr>
+	<tr><td valign="top">googlemapdrawthemap.php</td><td valign="top">Displays a clickable map in the Admin area.</td></tr>
+	<tr><td valign="top">googlemaplib.php</td><td valign="top">Library of map-related functions for public area.</td></tr>
+	<tr><td valign="top">googlemaplib2.php</td><td valign="top">Library of map-related functions for admin area.</td></tr>
+	<tr><td valign="top">numbered_marker.php</td><td valign="top">Generates pin image for display on map.</td></tr>
+	<tr><td valign="top">pieng.js</td><td valign="top">A Javascript library used to fix a problem with PNG images not being transparent in some versions of Internet Explorer.</td></tr>
+	<tr><td valign="top">white.gif</td><td valign="top">Small "pin" image for use in legend.</td></tr>
+	<tr>
+		<td valign="top" colspan="2">&nbsp;</td>
+	</tr>
+	<tr><td valign="top" colspan="2" bgcolor="#cccccc"><b>Font files (for PDF generation)</b></td></tr>
+	<tr><td valign="top">courier.php</td><td valign="top">Courier</td></tr>
+	<tr><td valign="top">helvetica.php</td><td valign="top">Helvetica</td></tr>
+	<tr><td valign="top">helveticab.php</td><td valign="top">Helvetica Bold</td></tr>
+	<tr><td valign="top">helveticabi.php</td><td valign="top">Helvetica Bold Italics</td></tr>
+	<tr><td valign="top">symbol.php</td><td valign="top">Symbol</td></tr>
+	<tr><td valign="top">times.php</td><td valign="top">Times Roman</td></tr>
+	<tr><td valign="top">timesb.php</td><td valign="top">Times Roman Bold</td></tr>
+	<tr><td valign="top">timesbi.php</td><td valign="top">Times Roman Bold Italics</td></tr>
+	<tr><td valign="top">timesi.php</td><td valign="top">Times Roman Italics</td></tr>
+	<tr>
+		<td valign="top" colspan="2">&nbsp;</td>
+	</tr>
+	<tr><td valign="top" colspan="2" bgcolor="#cccccc"><b>Other</b></td></tr>
+	<tr><td valign="top">license.txt</td><td valign="top">Your license agreement.</td></tr>
+	<tr><td valign="top">livingupdate.php</td><td valign="top">Utility to flag living individuals (left over from v4 upgrade).</td></tr>
+	<tr><td valign="top">setpermissions1.php</td><td valign="top">Attempts to set permissions on configuration files (used during setup). Success depends on server setup.</td></tr>
+	<tr><td valign="top">switchcolor.php</td><td valign="top">Creates new tab background images according to the color numbers you enter.</td></tr>
+	<tr><td valign="top">admin/deepindex.php</td><td valign="top">Allows you to link to an Admin page beyond the home page and keep the navigation framework intact by passing a "page" parameter (ie, deepindex.php?page=photos.php).</td></tr>
+	<tr><td valign="top">admin/setpermissions2.php</td><td valign="top">Attempts to set permissions on configuration files (used during setup). Success depends on server setup.</td></tr>
+	<tr><td valign="top">admin/surnameconvert400.php</td><td valign="top">Converts surnames to prefix + rest of name (left over from v4 upgrade).</td></tr>
+	<tr><td valign="top">admin/surnameunconvert400.php</td><td valign="top">Converts surnames from prefix + rest of name back to former format (left over from v4 upgrade).</td></tr>
+</table>
+</body>
+</html>
